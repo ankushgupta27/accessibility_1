@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accordion </title>
+    <link rel="stylesheet" href="page3.css">
+</head>
+
+<body>
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nostrum, voluptas suscipit facere
+            unde ea reiciendis rem aspernatur animi perspiciatis laborum placeat ipsam tempore. Obcaecati esse saepe
+            consequatur quidem vero magni repellendus laudantium perspiciatis doloribus incidunt in ab blanditiis at id
+            voluptatem cumque aperiam, corrupti architecto excepturi nam porro facilis?</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia praesentium, et, aspernatur aperiam minus
+            repellendus nobis architecto, itaque incidunt explicabo ullam aliquam magnam cum ratione odit quam harum ab
+            iure eaque reprehenderit. Voluptates, veniam est reprehenderit quas libero sequi, nostrum suscipit ratione
+            quis aperiam nam magni dignissimos odio? Iste, amet.</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid necessitatibus dolorum aperiam ratione at
+            perferendis quod natus incidunt consequuntur qui assumenda similique harum itaque sed, accusantium ullam
+            atque excepturi voluptatem numquam aliquam culpa magnam quasi eius. Nihil, molestiae. Unde hic non eius
+            recusandae beatae porro. Corporis fugit assumenda qui tenetur.</p>
+    </div>
+    <button class="accordion">Section 4</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid necessitatibus dolorum aperiam ratione at
+            perferendis quod natus incidunt consequuntur qui assumenda similique harum itaque sed, accusantium ullam
+            atque excepturi voluptatem numquam aliquam culpa magnam quasi eius. Nihil, molestiae. Unde hic non eius
+            recusandae beatae porro. Corporis fugit assumenda qui tenetur.</p>
+    </div>
+    <button class="accordion">Section 5</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid necessitatibus dolorum aperiam ratione at
+            perferendis quod natus incidunt consequuntur qui assumenda similique harum itaque sed, accusantium ullam
+            atque excepturi voluptatem numquam aliquam culpa magnam quasi eius. Nihil, molestiae. Unde hic non eius
+            recusandae beatae porro. Corporis fugit assumenda qui tenetur.</p>
+    </div>
+</body>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</html>
